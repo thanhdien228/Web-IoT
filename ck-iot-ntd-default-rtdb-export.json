@@ -1,0 +1,24 @@
+{
+  "CK-IoT": {
+    "PhongBep": {
+      "doam": "80",
+      "gas": "1000",
+      "nhietdo": "91"
+    },
+    "PhongKhach": {
+      "condition": "OFF",
+      "doam": "20",
+      "lamp": "OFF",
+      "lock": "OFF",
+      "nhietdo": "66",
+      "tv": "OFF",
+      "vacuum": "OFF",
+      "wifi": "OFF"
+    },
+    "PhongNgu": {
+      "condition": "OFF",
+      "fan": "OFF",
+      "lamp": "OFF"
+    }
+  }
+}

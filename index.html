@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/IconFont/themify-icons/themify-icons.css">
+    <title>TT_IoT</title>
+</head>
+<body>
+    <!--khoi dieu huong-->
+    <div id="container">
+        <div class="nav">
+            <button onclick="openTab(event, 'Tab1')" class="tablink nav-item">
+                <img src="assets/Icon_IMG/livingroom.png" alt="" class="item-img">
+            </button>
+            <button onclick="openTab(event, 'Tab2')" class="tablink nav-item">
+                <img src="assets/Icon_IMG/bedroom.png" alt="" class="item-img">
+            </button>
+            <button onclick="openTab(event, 'Tab3')" class="tablink nav-item">
+                <img src="assets/Icon_IMG/kitchenroom.png" alt="" class="item-img">
+            </button>
+        </div>
+
+        <!--khoi dieu khien-->
+        <div class="block">
+            <div class="header">                      
+                <div class="header-content">
+                    <div class="my-header">
+                        <img src="assets/Icon_IMG/ThanhDien.jpg" alt="" class="header-img">
+                    </div>  
+                    <div class="header-info">
+                        <h1 class="header1 name">Hello Welbio!</h1>
+                        <p class="header1 note">Welcome home!</p>
+                        <p class="header1 social"><a href="https://www.facebook.com/Ti.key.7370013" class="fb">MyFaceBook</a></p>
+                        <p class="header1 gmail">nguyenthanhdien163tp@gmail.com</p>
+                    </div>                  
+                </div>
+
+                <div class="header-icon">
+                    <i class="icon ti-bell"></i>
+                    <i class="icon ti-settings"></i>
+                    <i class="icon ti-user"></i>
+                </div>
+            </div>
+            <div class="box">
+                <div id="Tab1" class="tab">
+                    <div class="box-control">                                            
+                        <div class="control-item box-clock">
+                            <div class="clock">
+                                <div class="box-time">
+                                    <div class="box-1">
+                                        <div class="item-box-1 hours">00</div>
+                                        <div class="item-box-1">:</div>
+                                        <div class="item-box-1 minute">00</div>
+                                        <div class="item-box-1">:</div>
+                                        <div class="item-box-1 second">00</div>
+                                    </div>
+                                    <div class="box-2">
+                                        <div class="item-box-2 month">Mar</div>                                    
+                                        <div class="item-box-2 day">Sunday</div>
+                                        <div class="item-box-2 date">6</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="thoitiet">
+                                <div class="searchtiet" style="display:flex;margin-bottom:20px;">
+                                  <input type="text" class="search-bar" id="otiet" placeholder="Tìm kiếm địa điểm">
+                                  <button id="timtiet">Tìm</button>
+                                </div>
+                                <div class="weather-loading">
+                                    <div class="weather-info">
+                                        <div class="city"></div>
+                                        <div class="temp"></div>
+                                        <img class="may" src="https://openweathermap.org/img/wn/04n.png" alt="" />
+                                    </div>
+                                    <div class="weather-info">
+                                        <div class="description"></div>
+                                        <div><span class="humidity"></span></div>
+                                        <div><span class="wind"></span></div>
+                                    </div>                             
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-item">
+                            <div class="slider_control">
+                                <img class="icon-switch" id="imgND" src="assets/Icon_IMG/thermometer.png" alt="">
+                                <div id="valueND"></div>
+                                <input type="range" min="0" max="100" value="5" class="sliderv" id="sliderND">          
+                            </div>
+                            <div class="slider_control">
+                                <img class="icon-switch" id="imgDA" src="assets/Icon_IMG/humidity.png" alt="">
+                                <div id="valueDA"></div>                                
+                                <input type="range" min="0" max="100" value="5" class="sliderv" id="sliderDA">       
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-device">
+                        <div class="device-item">
+                            <div class="switch-box">
+                                <img src="assets/Icon_IMG/lock.png" alt="" class="icon-switch">
+                                <input id="lock" class="switch" type="checkbox">
+                                
+                            </div>
+                            
+                            <div class="switch-box">
+                                <img src="assets/Icon_IMG/wifi.png" alt="" class="icon-switch">
+                                <input id="wifi" class="switch" type="checkbox">
+                                
+                            </div>
+                            <div class="switch-box">
+                                <img src="assets/Icon_IMG/air-conditioner.png" alt="" class="icon-switch">
+                                <input id="condition" class="switch" type="checkbox">                                
+                            </div>
+                        </div>
+                        <div class="device-item">
+                            <div class="switch-box">
+                                <img src="assets/Icon_IMG/vacuum-cleaner.png" alt="" class="icon-switch">
+                                <input id="vacuum" class="switch" type="checkbox">
+                                
+                            </div>
+                            
+                            <div class="switch-box">
+                                <img src="assets/Icon_IMG/lamp.png" alt="" class="icon-switch">
+                                <input id="lamp" class="switch" type="checkbox">
+                                
+                            </div>
+                            <div class="switch-box">
+                                <img src="assets/Icon_IMG/smart-tv.png" alt="" class="icon-switch">
+                                <input id="tv" class="switch" type="checkbox">
+                                
+                            </div>
+                        </div>
+                        <div class="member-box">
+                            <h2 class="member-header">Members</h2>
+                            <div class="member-content">
+                                <div class="member-person">
+                                    <img src="assets/Icon_IMG/woman (1).png" alt="" class="person">
+                                    <p class="name-person">A</p>
+                                </div>
+                                <div class="member-person">
+                                    <img src="assets/Icon_IMG/man (2).png" alt="" class="person">
+                                    <p class="name-person">B</p>
+                                </div>
+                                <div class="member-person">
+                                    <img src="assets/Icon_IMG/man.png" alt="" class="person">
+                                    <p class="name-person">C</p>
+                                </div>
+                                <div class="member-person">
+                                    <img src="assets/Icon_IMG/man (1).png" alt="" class="person">
+                                    <p class="name-person">D</p>
+                                </div>
+                                <div class="member-person">
+                                    <img src="assets/Icon_IMG/woman (2).png" alt="" class="person">
+                                    <p class="name-person">E</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="Tab2" class="tab">
+                    <div class="tab-box">
+                        <div class="switch-box switch-tab">
+                            <button id="btn-fan">
+                                <img src="assets/Icon_IMG/fan.png" alt="" id="fan" class="icon-tab">
+                            </button>                                                      
+                        </div>                        
+                        <div class="switch-box switch-tab">
+                            <img src="assets/Icon_IMG/lamp.png" alt="" class="icon-tab">
+                            <input id="lamp1" class="switch" type="checkbox">
+                        </div>
+                        <div class="switch-box switch-tab">
+                            <img src="assets/Icon_IMG/air-conditioner.png" alt="" class="icon-tab">
+                            <input id="condition1" class="switch" type="checkbox">                                
+                        </div>
+                    </div>            
+                </div>
+                <div id="Tab3" class="tab">
+                    <div class="tab-box">                        
+                        <div class="box-kitchen">
+                            <div class="slider-kitchen ">
+                                <img class="icon-kitchen" id="imgND1" src="assets/Icon_IMG/thermometer.png" alt="">
+                                <div id="valueND1"></div>
+                                <input type="range" min="0" max="100" value="20" class="sliderv" id="sliderND1">          
+                            </div>
+                            <div class="slider-kitchen">
+                                <img class="icon-kitchen" id="imgDA1" src="assets/Icon_IMG/humidity.png" alt="">
+                                <div id="valueDA1"></div>                                
+                                <input type="range" min="0" max="100" value="20" class="sliderv" id="sliderDA1">       
+                            </div>
+                            <div class="slider-kitchen ">
+                                <img class="icon-kitchen" id="imgGAS1" src="assets/Icon_IMG/gas.png" alt="">
+                                <div id="valueGAS1"></div>                                
+                                <input type="range" min="0" max="1000" value="200" class="sliderv" id="sliderGAS1">       
+                            </div>     
+                        </div>                         
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script> 
+        <script src="control.js"></script>
+    <script>
+
+
+
+let weather = {
+  apiKey: "062d92a2646152d39eb7845a608226cb",   // Nhập key lấy từ openweathermap.org
+  fetchWeather: function (city) {
+    fetch(
+      "https://api.openweathermap.org/data/2.5/weather?q=" +
+        city +
+        "&lang=vi&units=metric&appid=" +
+        this.apiKey
+    )
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Không có địa điểm");
+        }
+        return response.json();
+      })
+      .then((data) => this.displayWeather(data));
+  },
+  displayWeather: function (data) {
+    const { name } = data;
+    const { icon, description } = data.weather[0];
+    const { temp, humidity } = data.main;
+    const { speed } = data.wind;
+	const { country } = data.sys;
+    document.querySelector(".city").innerText = name + " , " + country;
+    document.querySelector(".may").src = "https://openweathermap.org/img/wn/" + icon + ".png";
+    document.querySelector(".description").innerText = description;
+    document.querySelector(".temp").innerText = temp + "°C";
+    document.querySelector(".humidity").innerText =
+      "Độ ẩm: " + humidity + "%";
+    document.querySelector(".wind").innerText =
+      "Gió: " + speed + " km/h";
+  },
+  search: function () {
+    this.fetchWeather(document.querySelector(".search-bar").value);
+  },
+};
+
+document.querySelector(".searchtiet button").addEventListener("click", function () {
+  weather.search();
+});
+
+document
+  .querySelector(".search-bar")
+  .addEventListener("keyup", function (event) {
+    if (event.key == "Enter") {
+      weather.search();
+    }
+  });
+weather.fetchWeather("ha noi");
+
+const hours = document.querySelector('.hours');
+const minute = document.querySelector('.minute');
+const second = document.querySelector('.second');
+const month = document.querySelector('.month');
+const day = document.querySelector('.day');
+const date = document.querySelector('.date');
+const listMonth = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+];
+const listDay = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+setInterval(() => {
+    const Day = new Date();
+    const getHour = `${Day.getHours()}`.padStart(2, '0');
+    const getMinute = `${Day.getMinutes()}`.padStart(2, '0');
+    const getSecond = `${Day.getSeconds()}`.padStart(2, '0');
+    hours.innerText = getHour;
+    minute.innerText = getMinute;
+    second.innerText = getSecond;
+    month.innerText = listMonth[Day.getMonth()];
+    day.innerText = listDay[Day.getDay()];
+    date.innerText = Day.getDate();
+}, 500);
+    </script>  
+</body>
+</html>
